@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Rock Cissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="game-container">
+    <div class="score">
+        <p class="p-score"> vous </p>
+        <p> Ordinateur</p>
+        <p id="score-joueur"> 0 </p>
+        <p id="score-ordinateur"> 0 </p>
+        <div id="reset"> Recommencer </div>
+    </div>
+    <div class="action">
+        <p id="message"> A vous de jouer</p>
+        <div id="next"> tour suivant </div>
+    </div>
+    
+    <!--  Choix du joueur   -->
+    <div class="jeu">
+        <div class="choix">
+            <div class="button btn-joueur" id="pierre"> 
+                <img src="icon/icon_rock.png" alt="Pierre">
+                <p> Pierre </p>
+            </div>
+            <div class="button btn-joueur" id="feuille"> 
+                <img src="icon/icon_paper.png" alt="feuille">
+                <p> Feuille </p>
+            </div>
+            <div class="button btn-joueur" id="ciseaux"> 
+                <img src="icon/icon_scissors.png" alt="Ciseaux">
+                <p> Ciseaux </p>
+            </div>
+        </div>
+    
+        <!--  Choix de l'ordinateur   -->
+        <div class="choix">
+            <div class="button btn-ordi" id="opierre"> 
+                <img src="icon/icon_rock.png" alt="Pierre">
+                <p> Pierre </p>
+            </div>
+            <div class="button btn-ordi" id="ofeuille"> 
+                <img src="icon/icon_paper.png" alt="feuille">
+                <p> Feuille </p>
+            </div>
+            <div class="button btn-ordi" id="ociseaux"> 
+                <img src="icon/icon_scissors.png" alt="Ciseaux">
+                <p> Ciseaux </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js" defer ></script> 
+<script src="resize.js" defer></script>
+</body>
+</html>

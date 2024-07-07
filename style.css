@@ -1,0 +1,145 @@
+:root {
+  --primary: #65b7ff;
+  --secondary: #ff6565;
+  --back: white;
+  --action: #ff6565;
+  --border-radius: 15px;
+  --btn-padding: 10px 15px;
+  --backgcolor: rgba(255, 255, 255, 0.4);;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background: url(/icon/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container{
+  height: 90%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 18px;
+  padding: 40px;
+  margin: 40px 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 20px;
+  text-align: center;
+  font-size: 25px;
+  background-color: var(--backgcolor);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#reset {
+  font-size: 12px;
+  grid-column: span 2;
+  cursor: pointer;
+}
+
+#reset:hover {
+  color: var(--action);
+}
+
+.action {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#message {
+  font-size: 25px;
+}
+
+#next {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: var(--action);
+  color: white;
+  border-radius: var(--border-radius);
+  visibility: hidden;
+  cursor: pointer;
+}
+
+#next.active {
+  visibility: visible;
+}
+
+.jeu {
+  border-top: 1px solid black;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 200px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding: var(--btn-padding);
+}
+
+.btn-joueur,
+.btn-ordi {
+  border-radius: 15px;
+  transition: all 0.2s ease;
+}
+
+.btn-joueur {
+  cursor: pointer;
+  background-color: var(--backgcolor);
+}
+
+.btn-joueur:hover {
+  color: var(--primary);
+}
+
+.button p {
+  margin-left: 10px;
+}
+
+.button:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.btn-joueur.desactivated {
+  background-color: var(--back);
+  cursor: default;
+}
+
+.btn-joueur.desactivated:hover,
+.btn-joueur.active {
+  color: inherit;
+}
+
+.btn-joueur.active {
+  background-color: var(--primary);
+}
+
+.btn-ordi.active {
+  background-color: var(--secondary);
+}
+
